@@ -1,0 +1,191 @@
+/* Peapod */
+
+:root {
+  --bg:     #f4f4f2;
+  --fg:     #1c1c1e;
+  --muted:  #8a8a8e;
+  --tint:   #4B92AE;
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --gutter: 24px;
+  --column: 620px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #111113;
+    --fg:     #f2f2f0;
+    --muted:  #8a8a8e;
+    --tint:   #479ff0;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--tint); }
+
+/* ---- layout ---- */
+
+.page {
+  /*max-width: var(--column);*/
+  margin: 0 auto;
+  padding: 72px var(--gutter) 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.028em;
+}
+
+.sub {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.pitch {
+  margin: 52px 0 0;
+  font-size: 17px;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* ---- app store ---- */
+
+.cta { margin: 32px 0 0; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px 11px 17px;
+  border-radius: 999px;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  text-decoration: none;
+}
+
+.glyph {
+  width: 17px;
+  height: 17px;
+  margin-top: -2px;
+}
+
+.note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ---- device shot ---- */
+
+.device {
+  margin: 56px 0 0;
+}
+
+.device img {
+  display: block;
+  width: 100%;
+  max-width: 1170px;
+  height: auto;
+  margin: 0 auto;
+  /*transform: rotate(-2deg);*/
+}
+
+/* ---- privacy page ---- */
+
+.back {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.doc {
+  text-align: left;
+  padding-top: 88px;
+}
+
+.doc h1,
+.doc .sub {
+  text-align: center;
+}
+
+.doc section {
+  margin-top: 34px;
+}
+
+.doc h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.doc p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* ---- footer ---- */
+
+.foot {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: 88px var(--gutter) 56px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.foot nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.foot nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.foot p {
+  margin: 22px 0 0;
+}
+
+/* ---- small screens ---- */
+
+@media (max-width: 520px) {
+  .page { padding-top: 56px; }
+  h1 { font-size: 34px; }
+  .pitch { margin-top: 44px; }
+  .device { margin-top: 44px; }
+  .back { top: 20px; left: 20px; }
+  .doc { padding-top: 68px; }
+  .foot { padding-top: 64px; }
+}
