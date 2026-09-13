@@ -48,12 +48,31 @@ a { color: var(--tint); }
   text-align: center;
 }
 
+span.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+a.title {
+    color: var(--fg);
+    text-decoration: none;
+}
+
+a.title:hover {
+    opacity: 0.5;
+    transition: 0.5s all;
+}
+
 h1 {
-  margin: 0;
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.028em;
+    margin: 0;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.028em;
 }
 
 .sub {
@@ -126,6 +145,7 @@ h1 {
 }
 
 .doc {
+  max-width: var(--column);
   text-align: left;
   padding-top: 88px;
 }
