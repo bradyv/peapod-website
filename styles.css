@@ -129,6 +129,9 @@ h1 {
   color: var(--muted);
   font-size: 12px;
   font-weight: 600;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
 }
 
 /* ---- device shot ---- */
